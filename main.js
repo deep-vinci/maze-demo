@@ -1,4 +1,4 @@
-let maze = [[0, 0]];
+let maze = [[2, 2]];
 const mazeMap = document.querySelector(".maze");
 let width = 27;
 
@@ -23,6 +23,30 @@ const coordsDeterminer = (xAdd, yAdd) => {
 }
 
 // let topCoords = [maze.at(-1)[0], maze.at(-1)[1]]
-console.log(coordsDeterminer(1, 0))
-// while (true) {
-// }
+// console.log(coordsDeterminer(1, 0))
+for (let index = 0; index < 10; index++) {
+    
+    let surroundingCoords = [
+        coordsDeterminer(0, -1), 
+        coordsDeterminer(1, 0), 
+        coordsDeterminer(0, -1), 
+        coordsDeterminer(-1, 0)
+    ]
+
+    console.log(surroundingCoords)
+} 
+
+// {
+//     let surroundingCoords = [
+//         coordsDeterminer(0, -1), 
+//         coordsDeterminer(1, 0), 
+//         coordsDeterminer(0, -1), 
+//         coordsDeterminer(-1, 0)
+//     ]
+
+//     let filteredCoords = surroundingCoords.filter(coords => {
+//         return coords.every(value => value >= 0);
+//       });
+      
+//       console.log(filteredCoords);
+//       }
